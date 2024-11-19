@@ -25,4 +25,4 @@ jobs:
     - name: Build
       run: |
         npm install
-        gulp
+        cross-env NODE_ENV=production gulp build & gulp imagemin
