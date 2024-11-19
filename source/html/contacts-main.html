@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include("source/html/base/head.html", { "title": "Контакты" })
+
+	<body>
+		<div class="wrapper">
+			@@include("source/html/base/header.html",{ class: "border-site "})
+			<div class="border-site">
+				<div class="line light container-for-line">
+					<div class="line__element1"></div>
+					<div class="line__element2"></div>
+				</div>
+			<div class="container">
+				<div class="padding-left-right">
+					<div class="bread-crumbs bread-crumbs-container">
+						<ul class="bread-crumbs__list">
+							<li class="bread-crumbs__item">
+								<a class="bread-crumbs__link" href="#">Главная</a>
+							</li>
+							<li class="bread-crumbs__item">
+								<a class="bread-crumbs__link" href="#">Контакты</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			
+	<main class="border-site">
+		<div class="line light container-for-line">
+			<div class="line__element1"></div>
+			<div class="line__element2"></div>
+		</div>
+				<section class="intro">
+					<div class="container">
+						<div class="padding-left-right">
+							<h2>Контакты</h2>
+							<div class="contacts-main">
+								<!-- <div class="contacts-main__map br24" style="background-image: url(assets/img/map.png);"></div> -->
+								<div class="br24" id="yandex-map"></div>
+							<div class="contacts-main__list">
+								<div class="contacts-main__info">
+									<div class="contacts-main__info-list">
+										<div class="contacts-main__block">
+											<h3 class="contacts-main__block-text">Головной офис:</h3>
+											<h4 class="contacts-main__block-value">Республика Башкортостан, г. Уфа, ул. Маршала Жукова, 28</h4>
+										</div>
+										<div class="contacts-main__block">
+											<h3 class="contacts-main__block-text">Почта:</h3>
+											<h4 class="contacts-main__block-value"><a href="mailto:info@yteko.ru"> info@yteko.ru</a></h4>
+										</div>
+										<div class="contacts-main__block">
+											<h3 class="contacts-main__block-text">Телефон:</h3>
+											<h4 class="contacts-main__block-value"><a href="tel:+7(347)286-11-51"> +7 (347) 286-11-51</a></h4>
+										</div>
+									</div>
+									@@include("source/html/ui/btn.html", {"value": "Заказать звонок", "class": "btn btn--outline", attr: "data-modal-button='order-call-form'"})
+								</div>
+							</div>
+								
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include("source/html/base/footer.html")
+		</div>
+		@@include("source/html/base/scripts.html")
+	</body>
+</html>

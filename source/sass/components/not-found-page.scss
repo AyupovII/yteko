@@ -1,0 +1,33 @@
+.not-found-page{
+  position: relative;
+
+  &__img{
+  padding-top: 10rem;
+    width: 100%;
+    padding-right: 10%;
+    @include vp-1024 {
+      padding-right: 0;
+      position: absolute;
+      padding-top: 6.2rem;
+    }
+  }
+  &__content{
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    @include vp-1024 {
+      padding-top: 10.7rem;
+    }
+  }
+
+  &__title{
+    padding-bottom: 2.4rem;
+  }
+  &__text{
+    padding-bottom: 3.4rem;
+
+    @include vp-1024 {
+      padding-bottom: 4.2rem;
+    }
+  }
+}

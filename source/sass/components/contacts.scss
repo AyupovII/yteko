@@ -1,0 +1,108 @@
+.contacts {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 2fr minmax(370px, 1fr);
+
+  &>div {
+    max-height: 64.6rem;
+
+    @include vp-1024 {
+      max-height: none
+    }
+  }
+
+
+
+  @include vp-1024 {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3.2rem;
+  }
+
+  &__block-text {
+    color: var(--color-black);
+    opacity: 0.6;
+  }
+
+  &__block-value {
+    color: var(--color-black);
+    font-weight: 600;
+
+    a {
+      transition: color 0.3s ease-in-out;
+      color: var(--color-black);
+
+      &:hover {
+        color: var(--color-blue);
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    border-bottom: 1px solid var(--color-gray20);
+
+    @include vp-1024 {
+      gap: 2.4rem;
+    }
+  }
+
+  &__info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    @include vp-1024 {
+      gap: 1.2rem;
+    }
+  }
+
+  &__map {
+    background-size: cover;
+    background-position: center;
+
+    @include vp-1024 {
+      height: 40rem;
+    }
+  }
+
+  &__list {
+
+    overflow-x: auto;
+
+    &>div {
+      padding-bottom: 5rem;
+      // border-bottom: 1px solid var(--color-gray20);
+    }
+
+    &>div:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+
+}
+
+.contacts__info+.contacts__info {
+  padding-top: 5rem;
+}
+
+#yandex-map {
+  filter: brightness(95%);
+  flex: 2;
+  min-height: 40rem;
+
+  // @include tablet {
+  //     height: 455px;
+  // }
+}

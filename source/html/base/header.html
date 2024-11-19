@@ -1,0 +1,34 @@
+<header class="@@if (!context.isAbsolute) {header-line}">
+
+	<div class="container @@if (context.isAbsolute) {header__white} @@if (context.class) {@@class}">	
+	<!-- <div class="line light container-for-line">
+		<div class="line__element1"></div>
+		<div class="line__element2"></div>
+	</div> -->
+		<div class="padding-left-right">
+			<div class="header grid-column-head">
+				<div class="header__links">
+					<a href="/">
+						<img class="header__logo" src="assets/svg/logo.svg" alt="logo" />
+					</a>
+					@@include("source/html/components/nav-links.html")
+				</div>
+				<div class="header__controls">
+					<a class="header__phone" href="tel:+73472861151">+7 (347) 286-11-51</a>
+					@@if (context.isAbsolute){
+					@@include("source/html/ui/btn.html", {"value": "Заказать звонок", "class": "btn btn--transparent btn--small header__btn-order-call", attr: "data-modal-button='order-call-form'"})
+
+					}
+					@@if (!context.isAbsolute){
+					@@include("source/html/ui/btn.html", {"value": "Заказать звонок", "class": "btn btn--outline btn--small header__btn-order-call", attr: "data-modal-button='order-call-form'"})
+
+					}
+					<div class="header__burger" data-menu-burger>
+						@@include("source/html/components/burger.html")
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include("source/html/components/mobile-menu.html")
+</header>

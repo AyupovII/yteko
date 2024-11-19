@@ -1,0 +1,70 @@
+<div class="mobile-menu" data-menu-mobile>
+	<div class="container-top">
+		<div class="container-edge">
+			<div class="mobile-menu__header">
+				<a href="/">
+					<img
+						class="mobile-menu__logo"
+						src="assets/svg/logo-white.svg"
+						alt="logo"
+					/>
+				</a>
+				<div class="mobile-menu__control">
+					<a class="mobile-menu__phone" href="tel:+73472861151"
+						>+7 (347) 286-11-51</a
+					>
+					<div class="mobile-menu__close" data-menu-close>
+						@@include("source/html/components/close.html")
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  <div class="container-edge" style="flex:1">
+	<div class="mobile-menu__content">
+		<nav  data-accordion="single-expand">
+			<ul class="nav active" data-accordion-item>
+				<li class="nav__link">
+					<h4><a href="#">Продукция</a></h4>
+					<img
+						class="nav__icon"
+						src="assets/svg/shevron-down.svg"
+						data-accordion-button
+						alt="link-arrow"
+					/>
+				</li>
+				<li>
+					<ul class="nav__content mobile-menu__list">
+						<li><a href="#">Факельные установки</a></li>
+						<li><a href="#">Блочные насосные станции</a></li>
+						<li><a href="#">Мобильные установки подготовки газа</a></li>
+						<li><a href="#">Установки подготовки газа</a></li>
+						<li><a href="#">Подготовка нефти</a></li>
+						<li><a href="#">Печи и путевые нагреватели</a></li>
+						<li><a href="#">Блоки фильтров</a></li>
+				</ul>
+				</li>
+
+			</ul>
+		</nav>
+		<ul>
+			<li><a href="#"><h4>О компании</h4></a></li>
+		</ul>
+		<ul>
+			<li><a href="#"><h4>Услуги</h4></a></li>
+		</ul>
+		<ul>
+			<li><a href="#"><h4>Проекты</h4></a></li>
+		</ul>
+		<ul>
+			<li><a href="#"><h4>Карьера</h4></a></li>
+		</ul>
+		<ul>
+			<li><a href="#"><h4>Контакты</h4></a></li>
+		</ul>
+	</div>
+</div>
+<div class="container-edge  mobile-menu__btn">
+	@@include("source/html/ui/btn.html", {"value": "Заказать звонок", class:"btn--transparent", attr: "data-modal-button='order-call-form'"})
+</div>
+</div>

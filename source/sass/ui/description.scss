@@ -1,0 +1,6 @@
+.description {
+    display: block;
+    & + .description {
+        margin-top: 0.8rem;
+    }
+}

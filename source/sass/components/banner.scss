@@ -1,0 +1,87 @@
+.banner {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    width: 100%;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--black-to-white);
+        opacity: 0.6;
+    }
+
+    &__info {
+        margin-top: 20.2rem;
+        @include vp-1024 {
+            margin-top: 8.8rem;
+        }
+    }
+    &__description{
+        align-self: end;
+        padding-top: 10rem;
+    }
+
+    &__title {
+        color: var(--color-white);
+        font-size: 4.4rem;
+        padding-bottom: 2.4rem;
+        // padding-top: 8rem;
+        @include vp-1440 {
+            font-size: 3.5rem;
+            padding-bottom: 1.6rem;
+          }
+        @include vp-768 {
+            padding-top: 5rem;
+            font-size: 2.2rem;
+        }
+    }
+
+    &__text {
+        color: var(--color-white);
+        font-size: 2rem;
+        padding-bottom: 8rem;
+        // width: 482px;
+        @include vp-1024 {
+            padding-bottom: 3.7rem;
+            font-size: 1.4rem;
+            width: auto;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        position: relative;
+        @include vp-1280 {
+            gap: 4.8rem;
+        }
+        @include vp-1024 {
+            grid-template-columns: 1fr;
+            gap: 1.6rem;
+        }
+    }
+
+    &__control {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 4rem;
+    }
+
+    &__preview {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    &__padding-top{
+        padding-top: 3.7rem;
+        position: relative;
+        @include vp-1024 {
+            padding-top: 5rem;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<div class="modal" data-modal="notification">
+	<div class="modal_wrapper">
+		<button type="button" class="modal_close-btn" data-close-modal>
+			<img src="assets/svg/close.svg" alt="close" />
+		</button>
+		<div class="modal__container">
+			<div class="notification">
+				<img class="notification__icon" src="assets/svg/check-circle.svg" alt="check" />
+				<h3 class="notification__title"><span>СПАСИБО!</span></h3>
+				<h3 class="notification__title">Заявка отправлена</h3>
+				<p class="notification__text">Наш специалист перезвонит в ближайшее время</p>
+				@@include("source/html/ui/btn_link.html", {"value": "Вернуться на сайт", "class": "btn btn--blue notification__btn", href: "#"})
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,54 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  tr {
+    font-size: 1.6rem;
+
+    @include vp-1024 {
+      padding: 1.2rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  th {
+    padding: 1.1rem 2rem;
+    border: 1px solid rgba(168, 168, 168, 0.20);
+    background-color: #E1E5F2;
+    text-align: center;
+
+    @include vp-1024 {
+      padding: 1rem 2rem;
+    }
+  }
+
+  td:first-child {
+    font-weight: 600;
+    width: 231px;
+  }
+
+  td {
+    color: var(--color-black70-v2);
+    padding: 1.6rem;
+    border: 1px solid rgba(168, 168, 168, 0.20);
+
+    @include vp-1024 {
+      padding: 1.2rem;
+      display: block;
+    }
+  }
+
+  @include vp-1024 {
+    td+td {
+      padding-top: 0;
+      border-top: none;
+    }
+
+    td:first-child {
+      border-bottom: none;
+      width: auto;
+    }
+  }
+
+
+}

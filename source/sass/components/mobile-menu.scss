@@ -1,0 +1,100 @@
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-main-blue);
+  height: 100dvh;
+  // margin-bottom: 1.5rem;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  z-index: 1000;
+  transition: left var(--default-transition),
+    opacity var(--default-transition);
+  overflow-y: auto;
+
+  &._open {
+    width: 100vw;
+    left: 0;
+    opacity: 1;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-white);
+    align-items: center;
+    padding: 1.5rem 1rem;
+
+  }
+
+  &__logo {
+    height: 1.8rem;
+    width: 11rem;
+  }
+
+  &__control {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  &__phone {
+    color: var(--color-white);
+    font-size: 1.4rem;
+  }
+
+  &__close {
+    cursor: pointer;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: var(--color-main-red);
+    }
+  }
+
+  &__content {
+    height: calc(100dvh - 18rem);
+    overflow-x: auto;
+    padding: 5rem 1rem 0 1rem;
+
+    &>ul {
+      padding-bottom: 2rem;
+    }
+
+    ul>a {
+      color: var(--color-white)
+    }
+
+    ul>li>a {
+      color: rgba(255, 255, 255, 1);
+      width: 100%;
+      display: block;
+    }
+
+    & a:hover {
+      color: var(--color-blue)
+    }
+
+
+  }
+
+  &__btn {
+    padding: 3rem 1rem;
+  }
+
+  &__list {
+
+    padding-top: 2rem;
+  }
+}
+
+.active {
+  .mobile-menu__list {
+    padding-bottom: 2rem;
+  }
+}

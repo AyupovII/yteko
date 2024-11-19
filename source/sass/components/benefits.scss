@@ -1,0 +1,114 @@
+.benefits {
+    @include vp-1024 {
+        gap: 1.2rem;
+    }
+
+    &__item {
+        padding: 3.2rem;
+        background-color: var(--color-gray);
+        padding: 2.4rem;
+
+        @include vp-1024 {
+            padding: 2rem;
+        }
+    }
+    &__name{
+        padding-bottom: 1.2rem;
+    }
+
+    &__title {
+        margin-bottom: 5rem;
+        font-weight: 600;
+
+        @include vp-1024 {
+            margin-bottom: 2.4rem;
+        }
+
+        &-gray {
+            color: var(--color-black-gray);
+        }
+    }
+
+    &__text {}
+
+    &__worker {
+        display: flex;
+        gap: 6rem;
+        background-color: var(--color-gray);
+        height: 100%;
+
+        @include vp-1024 {
+            gap: 3rem;
+            flex-direction: column;
+        }
+
+        @include vp-1440 {
+            gap: 1rem;
+        }
+    }
+
+    &__image {
+        width: inherit;
+        max-width: min-content;
+        height: 100%;
+        object-fit: cover;
+        @include vp-1024 {
+            max-width: 100%;
+        }
+    }
+    &__main-image {
+        max-width: 340px !important;
+        max-width: min-content;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 24px 0px 0px 24px;
+        object-position: 80% 20%;
+        @include vp-1024 {
+            max-width: 100% !important;
+            height: 500px;
+            border-radius: 16px 16px 0px 0px;
+        }
+        @include vp-768 {
+            height: 230px;
+        }
+    }
+
+    &__workers {
+        @include vp-1800 {
+            display: none;
+        }
+
+    }
+
+    &__h3 {
+        margin-top: 8rem;
+
+        & h3:first-child {
+            padding-bottom: 0;
+        }
+
+        @include vp-1024 {
+            margin-top: 2.4rem;
+        }
+    }
+
+    &__grid-column {
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: 2fr minmax(370px, 1fr);
+
+        @include vp-1800{
+            grid-template-columns: 1fr;
+        }
+
+        &>div {
+            width: 100%;
+        }
+    }
+    &__navigation{
+        display: flex;
+        gap: 1rem;
+        padding-top: 1.2rem;
+        justify-content: flex-end;
+      }
+}

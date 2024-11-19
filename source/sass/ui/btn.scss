@@ -1,0 +1,133 @@
+.btn {
+	// display: inline-flex;
+	display: flex;
+	padding: 2.4rem 3.2rem;
+	outline: none;
+	color: var(--color-white);
+	background-color: var(--color-blue-primary);
+	cursor: pointer;
+	transition: all var(--default-transition);
+	border-radius: 24px;
+	font-size: 1.8rem;
+	width: fit-content;
+	white-space: nowrap;
+	justify-content: center;
+	align-items: center;
+	// line-height: normal;
+	line-height: 100%;
+
+	@include vp-1440 {
+		font-size: 1.6rem;
+		padding: 2.2rem 3rem;
+		border-radius: 16px;
+	}
+
+	@include vp-768 {
+		justify-content: center;
+		width: 100%;
+		font-size: 1.4rem;
+		padding: 2rem 2.8rem;
+	}
+
+	svg {
+		height: 1.188em;
+		// padding-left: 0.625em;
+		position: relative;
+		top: 1px;
+		// line-height: normal;
+		// line-height: 0%;
+	}
+
+	&:hover {
+		color: var(--color-white);
+		background: var(--red-gradient);
+		border-color: transparent;
+	}
+
+	&--small {
+		font-size: 1.6rem;
+		padding: 1.2rem 2.4rem !important;
+		border-radius: 12px;
+	}
+
+	&--blue {
+		background-color: var(--color-blue-primary);
+
+		&.disabled {
+			background-color: var(--color-black40);
+			color: var(--color-white);
+			pointer-events: none;
+		}
+	}
+
+	&--outline {
+		background-color: var(--color-white);
+		color: var(--color-main-blue);
+		border: 1px solid var(--color-main-blue);
+		// border-color: var(--color-main-blue);
+
+		&.disabled {
+			color: var(--color-white);
+			border: 1px solid var(--color-black40);
+			pointer-events: none;
+		}
+	}
+
+	&--outline-white {
+		background-color: var(--color-white);
+		color: var(--color-main-blue);
+		// border-color: var(--color-main-blue);
+		border-width: 0;
+
+		&.disabled {
+			background-color: var(--color-gray20);
+			color: var(--color-white);
+			border: 1px solid var(--color-black40);
+			pointer-events: none;
+		}
+	}
+
+	&--transparent-blue {
+		border: 1px solid var(--color-main-blue);
+		color: var(--color-main-blue);
+		background-color: transparent;
+	}
+
+	&--transparent {
+		border: 1px solid var(--color-white);
+		color: var(--color-white) !important;
+		background-color: transparent;
+	}
+
+	&--link {
+		color: var(--color-main-blue);
+		border-width: 0;
+		background-color: transparent;
+		padding: 0;
+
+		&:hover {
+			color: var(--color-main-red);
+			background: none;
+
+		}
+	}
+
+	&--cookies {
+		border-radius: 2rem !important;
+		height: min-content;
+		padding: 1.9rem 3.2rem;
+
+		@include vp-1024 {
+			border-radius: 1.6rem !important;
+			font-size: 1.4rem !important;
+		}
+	}
+
+	&.disabled {
+		border-color: var(--color-black40);
+		color: var(--color-black40);
+		pointer-events: none;
+	}
+
+	@include hover-focus {}
+}

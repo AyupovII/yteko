@@ -1,0 +1,155 @@
+.header {
+  display: grid;
+  grid-template-columns: 2fr minmax(370px, 1fr);
+  align-items: center;
+
+
+
+  @include vp-768 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 11.7rem;
+    padding: 2.1rem 0;
+
+    @include vp-1650 {
+      padding: 2rem 0;
+    }
+
+    @include vp-1440 {
+      padding: 2.2rem 0;
+    }
+
+    @include vp-1024 {
+      padding: 1.5rem 0;
+    }
+
+    @include vp-1024 {
+      gap: 0;
+      
+    }
+  }
+
+  &__burger {
+    display: none;
+    cursor: pointer;
+    color: var(--color-main-blue);
+
+    &:hover {
+      color: var(--color-main-red);
+    }
+
+    @include vp-1600 {
+      display: flex;
+    }
+  }
+
+  &__btn-order-call {
+    @include vp-1600 {
+      display: none;
+    }
+  }
+
+  &__logo {
+    height: 3.1rem;
+    min-width: 11rem;
+
+    @include vp-1650 {
+      height: 2.7rem;
+    }
+
+    @include vp-1440 {
+      height: 2.4rem;
+    }
+
+    @include vp-1024 {
+      height: 2.1rem;
+    }
+
+    @include vp-768 {
+      height: 1.8rem
+    }
+  }
+
+  &__controls {
+    // min-height: auto;
+    height: 100%;
+    padding: 2.1rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3.2rem;
+    font-size: 1.6rem;
+
+    // height: 4.3rem;
+    @include vp-1650 {
+      padding: 2rem 0;
+    }
+
+    @include vp-1440 {
+      padding: 2.2rem 0;
+    }
+
+    @include vp-1024 {
+      padding: 1.5rem 0;
+    }
+
+    a:hover {
+      color: var(--color-main-red) !important;
+    }
+
+    @include vp-1650 {
+      font-size: 1.5rem;
+      gap: 2.7rem
+    }
+
+    @include vp-1440 {
+      font-size: 1.4rem;
+      gap: 1.5rem
+    }
+
+    @include vp-1024 {
+      height: 1.8rem;
+
+    }
+
+    @include vp-768 {
+      gap: 1.5rem
+    }
+  }
+
+  &__btn-order-call {
+    white-space: nowrap;
+  }
+
+  &__white {
+    position: absolute;
+    z-index: 3;
+
+    a {
+      color: var(--color-white) !important;
+    }
+
+    .header__burger {
+      color: var(--color-white) !important;
+
+      &:hover {
+        color: var(--color-main-red) !important;
+      }
+    }
+  }
+
+  &__phone {
+    white-space: nowrap;
+  }
+}
+
+header {
+  &>.border-site {
+    align-items: normal !important;
+  }
+}

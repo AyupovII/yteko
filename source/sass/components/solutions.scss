@@ -1,0 +1,141 @@
+.solutions {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 2fr minmax(370px, 1fr);
+
+  @include vp-1024 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__content {
+    display: none;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    &._active {
+      display: flex;
+    }
+  }
+
+  &__tab-title {
+    display: none;
+    @include vp-1024 {
+      display: block;
+      padding-bottom: 1.2rem;
+    }
+  }
+
+  &__block-text {
+    padding: 3.2rem;
+    background-color: var(--color-gray);
+
+    ul {
+      list-style-type: inherit;
+
+      li {
+        &:first-of-type {
+          padding-top: 1.2rem;
+        }
+
+        color: var(--color-main-red);
+        margin-left: 1.8rem;
+        padding-bottom: 1.2rem;
+
+        &::marker {
+          content: "• ";
+        }
+      }
+    }
+
+    @include vp-1024 {
+      padding: 2.4rem;
+    }
+  }
+
+  &__image {
+    height: 30.4rem;
+    width: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include vp-1024 {
+      height: 20rem;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__navigation-item {
+    border-radius: 16px;
+    position: relative;
+    padding: 3.2rem;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--color-gray);
+
+    &::before {
+      transform: translateY(-50%);
+      content: "";
+
+      border-radius: 50%;
+      background-color: transparent;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: 0.6s ease;
+      background: var(--red-gradient);
+      z-index: 1;
+
+    }
+
+    &:hover {
+      color: var(--color-white);
+
+      &::before {
+        width: 10px;
+        height: 10px;
+        transform: scale(120);
+        left: 0;
+        border-radius: 10px;
+        background: var(--red-gradient);
+        @include vp-1024 {
+          transform: scale(200);
+        }
+      }
+    }
+
+    @include vp-1024 {
+      padding: 2rem;
+    }
+
+    &._active {
+      // background: var(--red-gradient);
+      color: var(--color-white);
+
+      &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        transform: scale(120);
+        left: 0;
+        border-radius: 10px;
+        @include vp-1024 {
+          transform: scale(200);
+        }
+        // background: none;
+      }
+    }
+
+    &>* {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}

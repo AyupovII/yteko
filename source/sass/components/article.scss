@@ -1,0 +1,27 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  &__text-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  h4 {
+    padding-bottom: 1.2rem;
+  }
+
+  &__sub-title {
+    padding-top: 2.6rem;
+
+    h3 {
+      text-transform: uppercase;
+
+      span {
+        color: var(--color-main-blue);
+      }
+    }
+  }
+}

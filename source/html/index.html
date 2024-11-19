@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include("source/html/base/head.html", { "title": "Главная" })
+
+	<body>
+		<div class="wrapper">
+			<div class="border-top"></div>
+			<div class="container-full">
+
+				@@include("source/html/base/header.html", {isAbsolute: true})
+				<div class="border-site light">				
+				<div class="line container-for-line">
+					<div class="line__element1"></div>
+					<div class="line__element2"></div>
+				</div>
+				<div class="swiper swiper-main">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div
+								class="slider"
+							>
+							<div class="slider-career__block-img">
+								<img src = "assets/img/main-slide1.png" alt="slide">
+							</div>
+								<div class="container container-slider">
+									<div class="padding-left-right" style="height: 100%;">
+										<div class="slider__content grid-column">
+											<div class="slider__info">
+												<h1 class="slider__title">
+													Производственная <br />
+													Практика в Уфе
+												</h1>
+												<p class="slider__text">
+													Приглашаем студентов и выпускников на практику с
+													дальнейшим трудоустройством
+												</p>
+											</div>
+											<div class="slider__control">
+												<div class="slider__preview">
+
+												</div>
+												@@include("source/html/ui/btn_link.html", {"value": "Узнать подробнее", "class": "btn btn--outline-white slider__btn"})
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div
+								class="slider"
+							>
+							<div class="slider-career__block-img">
+								<img src = "assets/img/main-slide2.png" alt="slide">
+							</div>
+								<div class="container container-slider">
+									<div class="padding-left-right">
+										<div class="slider__content grid-column">
+											<div class="slider__info">
+												<h1 class="slider__title">
+													Достигаем <br />
+													Результатов вместе!
+												</h1>
+												<p class="slider__text">
+													Стань частью команды, в которой реализуешь свой
+													потенциал
+												</p>
+											</div>
+											<div class="slider__control">
+												<div class="slider__preview"></div>
+												@@include("source/html/ui/btn_link.html", {"value": "Посмотреть вакансии", "class": "btn btn--outline-white slider__btn"})
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div
+								class="slider"
+							>
+							<div class="slider-career__block-img">
+								<img src = "assets/img/main-slide3.png" alt="slide">
+							</div>
+								<div class="container container-slider">
+									<div class="padding-left-right">
+										<div class="slider__content grid-column">
+											<div class="slider__info">
+												<h1 class="slider__title">
+													Предоставляем <br />
+													Комплекс услуг <br />
+													для переработки нефти и газа
+												</h1>
+												<p class="slider__text">
+													Комплекс инжиниринговых услуг в области производства,
+													поставок и строительства нефтегазового оборудования
+												</p>
+											</div>
+											<div class="slider__control">
+												<div class="slider__preview">
+													@@include("source/html/components/preview-link.html")
+													@@include("source/html/components/preview-link.html")
+												</div>
+												@@include("source/html/ui/btn_link.html", {"value": "Перейти к услугам", "class": "btn btn--outline-white slider__btn"})
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container swiper-main-pagination--wrapper">
+						<div class="padding-left-right">
+							<div class="grid-column-three">
+								<div class="swiper-pagination swiper-main-pagination"></div>
+								<div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<main class="border-site">
+				<div class="line light container-for-line">
+					<div class="line__element1"></div>
+					<div class="line__element2"></div>
+				</div>
+				<section>
+					<div class="container">
+						<div class="padding-left-right">
+							<div class="about-company grid-column">
+								<div class="about-company__info">
+									<p class="rubric">О компании</p>
+									<div class="indicator">
+										<p class="indicator__value">6&nbsp;500&nbsp;м<sup>2</sup></p>
+										<p class="indicator__text">Производственных площадей</p>
+									</div>
+								</div>
+								<div class="about-company__indicators">
+									<div class="indicator">
+										<p class="indicator__value">180+</p>
+										<p class="indicator__text">Исполненных проектов</p>
+									</div>
+									<div class="indicator">
+										<p class="indicator__value">150+</p>
+										<p class="indicator__text">Квалифицированных сотрудников</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="container">
+						<div class="padding-left-right">
+							<div class="title-content-box desktop img-yteko">
+								<h2><span>Компания «УТЕКО»</span></h2>
+								<h2>является ведущим производителем оборудования </h2>
+								<h2 class="right">для нефтегазовой промышленности</h2>
+							</div>
+							<div class="title-content-box mobile img-yteko">
+								<h2><span>Компания «УТЕКО»</span></h2>
+								<h2>является ведущим </h2>
+								<h2 class="right"> производителем оборудования </h2>
+								<h2 class="right">для нефтегазовой промышленности</h2>
+							</div>
+							<div class="grid-box grid-column">
+								<div class="grid-box__item1">
+									@@include("source/html/components/video-block.html")
+									<p>
+										Наши преимущества:
+										<br>
+										<br>
+										<span class="description">
+											<strong>Надежность:</strong>
+											Мы являемся опытным и надежным партнером, предлагающим высококачественные инжиниринговые услуги.
+										</span>
+										<span class="description">
+											<strong>Инновационность:</strong>
+											Мы постоянно внедряем новейшие технологии и разработки, обеспечивая максимальную эффективность и безопасность проектов.	
+										</span>
+										<span class="description">
+											<strong>Индивидуальный подход:</strong>
+											Мы учитываем специфические потребности и цели каждого объекта, предлагая оптимальные решения.
+										</span>
+										<span class="description">
+											<strong>Профессионализм:</strong>
+											Наша команда состоит из высококвалифицированных специалистов, проходящих регулярное обучение и повышение квалификации.	
+										</span>
+										<span class="description">
+											<strong>Комплексность:</strong>
+											Мы предоставляем полный спектр услуг, избавляя вас от необходимости привлекать сторонних подрядчиков.
+										</span>
+										</p>
+								</div>
+								<div class="grid-box__item2">
+									<p class="grid-box__text">
+										Современная компания «УТЕКО» оказывает комплекс услуг
+										в области производства и поставок нефтегазового промыслового
+										оборудования.
+									</p>
+									@@include("source/html/ui/btn_link.html", {"value": "Больше о компании", "class": "btn btn--outline grid-box__btn-desktop"})
+								</div>
+								<div class="grid-box__item3">
+									<img
+										class="br24"
+										src="assets/img/img1.png"
+										alt="grid-box"
+									/>
+								</div>
+							</div>
+							<div class="grid-box__btn-mobile">
+								@@include("source/html/ui/btn_link.html", {"value": "Больше о компании", "class": "btn btn--outline "})
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="container">
+						<div class="padding-left-right">
+							<div class="title-container">
+								<p class="rubric">Услуги</p>
+								<!-- <h2 class="title-content" style="display: flex; justify-content: space-between;">
+									Комплексные решения <br><span class="right">для вашего бизнеса</span>
+								</h2> -->
+								<div class="title-content-box mobile">
+									
+									<h2>Комплексные</h2>
+									<h2 class="left">решения </h2>
+									<h2 style="padding-bottom:0" class="left"><span>для вашего бизнеса </span></h2>
+								</div>
+								<div class="title-content-box desktop" style="width: 66%;">
+									<h2 class="left">Комплексные решения</h2>
+									<h2 class="right"><span>для вашего бизнеса </span></h2>
+								</div>
+							</div>
+							<div
+								class="info-block br24"
+								style="background-image: url('assets/img/background1.png')"
+							>
+								<div class="info-block__content br24">
+									<h4 class="info-block__title">
+										Инжиниринговая компания “УТЕКО”
+									</h4>
+									<p class="info-block__text">
+										Выполняет комплекс работ по проектированию, изготовлению,
+										шеф-монтажным и пусконаладочным сервисным работам на
+										объектах добычи и переработки нефти и газа. Мы предлагаем
+										индивидуальный подход к каждому клиенту и гарантируем
+										высокое качество выполнения работ на каждом этапе.
+									</p>
+									@@include("source/html/ui/btn_link.html", {"value": "Узнать подробнее", "class": "btn btn--transparent"})
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="container-full">
+						<div class="container">
+							<div>
+								<div class="title-content-box desktop">
+								<h2 style="padding-bottom: 0;">Реализованные проекты</h2>
+							</div>
+							<div class="title-content-box mobile" style="width: 100%;">
+								<h2>Реализованные </h2>
+								<h2 style="padding-bottom: 0; text-align: right;">проекты</h2>
+							</div>
+							</div>
+
+						</div>
+						<div class="swiper swiper-projects">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div
+									class="wide-block"
+									style="background-image: url('assets/img/IMG_1400.jpg')"
+								>
+									<div class="container">
+										<div class="padding-left-right">
+											<div class="wide-block__content">
+												<h3 class="wide-block__title">
+													Установка факельная совмещенная
+												</h3>
+												<p class="wide-block__text">Обустройство участка 3А Ачимовских залежей Уренгойского месторождения<br>
+													<br>
+													Заказчик: ООО «Газпромнефть-Заполярье»</p>
+												<div class="wide-block__info">
+													<h4 class="wide-block__subtitle">
+														ООО «Газпромнефть-Заполярье»
+													</h4>
+													<h4 class="wide-block__subtitle">г. Тараз</h4>
+												</div>
+												@@include("source/html/ui/btn_link.html", {"value": "Подробнее", "class": "btn btn--outline-white"})
+											</div>
+										</div>
+									</div>
+								</div>
+								</div>
+								<div class="swiper-slide">
+									<div
+									class="wide-block"
+									style="background-image: url('assets/img/background2.png')"
+								>
+									<div class="container">
+										<div class="padding-left-right">
+											<div class="wide-block__content">
+												<h3 class="wide-block__title">
+													Установка предварительной<br> подготовки газа
+												</h3>
+												<p class="wide-block__text">
+													Рыбатекст используется дизайнерами, проектировщиками и
+													фронтендерами, когда нужно быстро заполнить макеты или
+													прототипы содержимым. Это тестовый контент, который не
+													должен нести никакого смысла
+												</p>
+												<div class="wide-block__info">
+													<h4 class="wide-block__subtitle">
+														Заказчик: ООО НЗПН Трейд
+													</h4>
+													<h4 class="wide-block__subtitle">г. Уфа</h4>
+												</div>
+												@@include("source/html/ui/btn_link.html", {"value": "Подробнее", "class": "btn btn--outline-white"})
+											</div>
+										</div>
+									</div>
+								</div>
+								</div>
+								<div class="swiper-slide">
+									<div
+									class="wide-block"
+									style="background-image: url('assets/img/background2.png')"
+								>
+									<div class="container">
+										<div class="padding-left-right">
+											<div class="wide-block__content">
+												<h3 class="wide-block__title">
+													Установка предварительной<br> подготовки газа
+												</h3>
+												<p class="wide-block__text">
+													Рыбатекст используется дизайнерами, проектировщиками и
+													фронтендерами, когда нужно быстро заполнить макеты или
+													прототипы содержимым. Это тестовый контент, который не
+													должен нести никакого смысла
+												</p>
+												<div class="wide-block__info">
+													<h4 class="wide-block__subtitle">
+														Заказчик: ООО НЗПН Трейд
+													</h4>
+													<h4 class="wide-block__subtitle">г. Уфа</h4>
+												</div>
+												@@include("source/html/ui/btn_link.html", {"value": "Подробнее", "class": "btn btn--outline-white"})
+											</div>
+										</div>
+									</div>
+								</div>
+								</div>
+							</div>
+							<!-- <div
+							class="swiper-pagination swiper-projects-pagination"
+						></div> -->
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="container">
+						<div class="padding-left-right">
+							<div class="title-container">
+								<p class="rubric">Карьера</p>
+								<!-- <h2 class="title-content">
+									Построй карьеру в команде <br><span>профессионалов</span>
+								</h2> -->
+								<div class="title-content-box desktop" style="width: 80%;">
+									<h2 style="text-align: right;">Построй карьеру в команде</h2>
+									<h2 style="padding-bottom: 0;"><span>профессионалов </span></h2>
+								</div>
+								<div class="title-content-box mobile">
+									<h2>Построй</h2>
+									<h2 class="left">карьеру в команде</h2>
+									<h2 class="right"><span>профессионалов </span></h2>
+								</div>
+							</div>
+							<div class="abstraction">
+								<div class="abstraction-item1 abstraction__block">
+									<img src="assets/img/abstraction1.png" alt="abstraction1" />
+									<p>
+										<b>Будешь услышан</b> своим руководителем и не останешься в стороне
+									</p>
+								</div>
+								<div
+									class="abstraction-item2 abstraction__block abstraction__img"
+									style="background-image: url('assets/img/img2.png')"
+								></div>
+								<div class="abstraction__item3  abstraction__empty">
+									<!-- <img src="assets/img/abstraction3.png" alt="abstraction3" />
+									<p>
+										Поработаешь над увлекательными проектами в нефтегазовой
+										отрасли с лидерами рынка в России и зарубежом
+									</p> -->
+								</div>
+								<div class="abstraction__item4 abstraction__empty">
+									<h3 class="slogan">УТЕКО - ДОСТИГАЕМ РЕЗУЛЬТАТОВ ВМЕСТЕ!</h3>
+									@@include("source/html/ui/btn_link.html", {"value": "Перейти к вакансиям", "class": "btn btn--outline"})
+								</div>
+								<div class="abstraction__item5 abstraction__block">
+									<img src="assets/img/abstraction2.png" alt="abstraction2" />
+									<p><b>Реализуешь свой потенциал и построишь карьеру</b></p>
+								</div>
+
+								<div class="abstraction__item6 abstraction__block">
+									<img src="assets/img/abstraction3.png" alt="abstraction3" />
+									<p>
+										Поработаешь над <b>увлекательными проектами</b> в нефтегазовой
+										отрасли с лидерами рынка в России и зарубежом
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="container">
+						<div class="padding-left-right">
+							<h2>С нами работают</h2>
+							<div class="swiper swiper-companies">
+								<div class="swiper-wrapper companies">
+									<div class="swiper-slide">
+										<div class="companies__slide">
+											<img src="assets/img/logo-company1.png" alt="company1" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="companies__slide">
+											<img src="assets/img/logo-company2.png" alt="company2" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="companies__slide">
+											<img src="assets/img/logo-company3.png" alt="company3" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="companies__slide">
+											<img src="assets/img/logo-company4.png" alt="company4" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="companies__slide">
+											<img src="assets/img/logo-company5.png" alt="company5" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="companies__slide">
+											<img src="assets/img/logo-company6.png" alt="company6" />
+										</div>
+									</div>
+								</div>
+								<div
+									class="swiper-pagination swiper-companies-pagination"
+								></div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include("source/html/base/footer.html")
+		</div>
+		@@include("source/html/base/scripts.html")
+	</body>
+</html>

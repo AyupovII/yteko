@@ -1,0 +1,12 @@
+.link-arrow {
+  width: min-content;
+  &__text {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+
+    @include vp-768 {
+      font-size: 1.4rem;
+    }
+  }
+}

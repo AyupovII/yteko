@@ -1,0 +1,42 @@
+.info-block{
+  padding: 3.2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  @include vp-768 {
+    padding: 1rem;
+    height: 57rem;
+    align-items: flex-end;
+    background-position: center;
+  }
+  &__content{
+    max-width: 70rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background-color: var(--color-transparent);
+    color: var(--color-white);
+    padding: 5rem;
+    @include vp-768 {
+      padding: 2.4rem;
+      height: min-content;
+    }
+  }
+  &__title{
+    font-size: 2rem;
+    margin-bottom: 8rem;
+    @include vp-768 {
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+    }
+  }
+  &__text{
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-bottom: 3.2rem;
+    @include vp-768 {
+      font-size: 1.4rem;
+      margin-bottom: 5rem;
+    }
+  }
+  &__btn{}
+}

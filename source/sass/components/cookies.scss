@@ -1,0 +1,103 @@
+.cookies {
+	margin-bottom: 0 !important;
+	width: 100%;
+	position: fixed;
+	bottom: 2rem;
+	z-index: 20;
+	margin-right: auto;
+	margin-left: auto;
+	opacity: 0;
+	transition: var(--default-transition);
+	z-index: 1000;
+
+
+	@include vp-1024 {
+		bottom: 0;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	}
+
+	&.active {
+		opacity: 1;
+	}
+}
+
+.cookies_wrap {
+	border-radius: 24px;
+	display: flex;
+	justify-content: space-between;
+	gap: 6rem;
+	padding: 2.4rem;
+	max-width: 160rem;
+	margin: 0 auto;
+	background-color: var(--color-main-blue);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+
+	@include vp-1024 {
+		padding: 2rem 0;
+		gap: 2.4rem;
+		border-radius: 0;
+		flex-direction: column;
+		box-shadow: none
+	}
+}
+
+.cookies_text {
+	max-width: 131.6rem;
+	color: var(--color-white);
+}
+
+.cookies_link {
+	color: var(--color-orange);
+	font-size: 1.4rem;
+	transition: var(--default-transition);
+
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+.cookies_container {
+	display: flex;
+	gap: 3rem;
+	justify-content: center;
+	align-items: center;
+
+	@include vp-1024 {
+		justify-content: flex-start;
+	}
+}
+
+.cookies__btn {}
+
+.cookies__desktop {
+	display: block;
+
+	@include vp-1024 {
+		display: none;
+	}
+}
+
+.cookies__mobile {
+	display: none;
+
+	@include vp-1024 {
+		display: block;
+	}
+}
+
+.cookies__flex {
+	display: flex;
+	gap: 2.4rem;
+	padding: 2rem 0;
+
+	@include vp-768 {
+		flex-direction: column;
+	}
+}
+
+.cookies_content {
+	@include vp-1024 {
+		background-color: var(--color-main-blue);
+	}
+}

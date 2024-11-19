@@ -1,0 +1,70 @@
+.nav {
+  &>nav{
+    margin-bottom: 2rem;
+  }
+  &__button {}
+
+  & ul {
+    height: 0;
+    overflow: hidden;
+    // transition: all 0.6s ease-in-out;
+  }
+
+  &__link {
+    display: flex;
+    gap: 1.6rem;
+    padding-bottom: 0;
+    width: 100%;
+
+    @include vp-768 {
+      gap: 1.6rem;
+    }
+    &:hover {
+      a{
+        color: var(--color-blue)
+      }
+    }
+  }
+  &__icon {
+    cursor: pointer;
+    display: none;
+    transform: rotate(180deg);
+    @include vp-1600 {
+      display: block;
+    }
+  }
+  & a{
+    color: var(--color-white);
+  }
+
+  &.active {
+    .nav__icon {
+      transform: rotate(0deg);
+    }
+
+    .nav__content {
+      // transition: all 0.6s ease-in-out;
+      display: flex;
+      height: max-content;
+      flex-direction: column;
+      gap: 1.6rem;
+
+      @include vp-768 {
+        gap: 1rem;
+      }
+
+      a {
+        color: var(--color-white);
+        opacity: 0.6;
+        font-size: 2rem;
+        &:hover {
+          color: var(--color-blue)
+        }
+
+        @include vp-1024 {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

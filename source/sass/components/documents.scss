@@ -1,0 +1,13 @@
+.documents{
+  // display: flex;
+  // overflow-x: auto;
+  // flex-direction: column;
+  &__slide{
+    width: auto !important;
+    
+    &>img{
+      width: auto !important;
+    }
+    // width: 20.6rem;
+  }
+}

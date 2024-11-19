@@ -1,0 +1,287 @@
+.swiper-main,
+.swiper-companies,
+.swiper-certificates-pagination,
+.swiper-images-pagination,
+.swiper-documents,
+.swiper-documents-pagination,
+.swiper-projects,
+.swiper-projects-pagination {
+    width: 100%;
+
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0;
+        margin-right: 20px;
+
+    }
+
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+
+    .swiper-pagination-bullet {
+        cursor: pointer;
+        border-radius: 50px;
+        display: block;
+        position: relative;
+        width: 156px;
+        height: 2px;
+        text-align: left;
+        border-radius: 0;
+        opacity: 1;
+        margin-right: 20px;
+        background-color: transparent;
+        transition: all 0.6s ease;
+
+        &:last-child {
+            margin-right: 0 !important;
+        }
+
+
+        em {
+            font-size: 15px;
+            line-height: 28px;
+            font-weight: bold;
+            letter-spacing: -0.38px;
+            color: transparent;
+        }
+
+        i {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-white);
+            opacity: 0.5;
+            flex-shrink: 0;
+        }
+
+        b {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            width: 0%;
+            height: 2px;
+            background-color: var(--color-white);
+            flex-shrink: 0;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+
+        b {
+            animation-name: countingBar;
+            animation-duration: 3s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    @keyframes countingBar {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+}
+
+.swiper-companies,
+.swiper-certificates-pagination,
+.swiper-images-pagination,
+.swiper-documents-pagination,
+.swiper-documents,
+.swiper-projects-pagination {
+    i {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-gray20) !important;
+        opacity: 0.5;
+        flex-shrink: 0;
+    }
+
+    b {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 0%;
+        height: 2px;
+        background-color: var(--color-main-blue) !important;
+        flex-shrink: 0;
+    }
+}
+
+.swiper-main-pagination--wrapper {
+    position: absolute;
+    bottom: 8rem;
+
+    @include vp-1024 {
+        bottom: 5.6rem;
+    }
+}
+
+.swiper-main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 90rem;
+
+    @include vp-1024 {
+        max-height: 71rem;
+        height: 100dvh;
+
+    }
+}
+
+.swiper-companies {
+    z-index: 100;
+}
+
+.swiper-main-pagination,
+.swiper-certificates-pagination,
+.swiper-images-pagination {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+    z-index: 10;
+
+    &>* {
+        flex: 1;
+    }
+
+    @include vp-1440 {
+        width: 50%;
+    }
+
+    @include vp-1024 {
+        bottom: 4rem;
+        width: 100%;
+    }
+}
+
+.swiper-documents-pagination {
+    // width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+    z-index: 10;
+
+
+
+    @include vp-1440 {
+        width: 80%;
+
+        &>* {
+            flex: 1;
+        }
+        
+    &>.swiper-pagination-bullet-active {
+        flex: 1.3;
+
+    }
+    }
+
+    @include vp-1024 {
+        bottom: 4rem;
+        width: 100%;
+    }
+}
+
+.swiper-projects-pagination,
+.swiper-companies-pagination,
+.swiper-images-pagination {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+    z-index: 10;
+
+    &>* {
+        max-width: 30px;
+
+    }
+
+    &>.swiper-pagination-bullet-active {
+        max-width: 50px;
+
+    }
+
+    @include vp-1440 {
+        width: 50%;
+    }
+
+    @include vp-1024 {
+        bottom: 4rem;
+        width: 80%;
+    }
+}
+
+.swiper-main-pagination {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: initial;
+}
+
+.swiper-companies-pagination,
+.swiper-certificates-pagination,
+.swiper-images-pagination,
+.swiper-documents-pagination,
+.swiper-projects-pagination {
+    display: flex;
+    justify-content: center;
+
+    .swiper-pagination-bullet {
+        max-width: 30px;
+    }
+
+    .swiper-pagination-bullet-active {
+        max-width: 50px;
+    }
+}
+
+.swiper-certificates-pagination,
+.swiper-images-pagination,
+.swiper-companies-pagination,
+.swiper-projects-pagination {
+    padding-top: 3.2rem;
+
+    @include vp-1024 {
+        padding-top: 2.4rem;
+    }
+}
+
+.swiper-documents-pagination {
+    padding-top: 2.4rem;
+}
+
+.swiper-image {
+    min-height: 20rem;
+}
+
+.swiper-main{
+    .swiper-pagination-bullet-active {
+        b {
+            animation-duration: 6s;
+        }
+    }
+}

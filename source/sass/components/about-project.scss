@@ -1,0 +1,36 @@
+.about-project {
+  @include vp-1024 {
+    gap: 1.6rem;
+}
+  &__indicators {
+      display: flex;
+      flex-direction: column;
+      gap: 7.3rem;
+
+      @include vp-1024 {
+          gap: 1.6rem;
+      }
+  }
+
+  &__info {
+      display: flex;
+      flex-direction: column;
+
+      &>* {
+          width: 100%;
+      }
+
+      @include vp-1024 {
+          flex-direction: column;
+          gap: 3.2rem;
+          // margin-bottom: 1.6rem;
+      }
+  }
+  &__text {
+    margin-top: 6rem;
+
+    @include vp-1024 { 
+      margin-top: 5rem;
+    }   
+  }
+}

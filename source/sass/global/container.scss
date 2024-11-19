@@ -1,0 +1,72 @@
+.container {
+	width: 100%;
+	max-width: 192rem;
+	margin: 0 auto;
+	padding-left: 16rem;
+	padding-right: 16rem;
+
+
+	@include vp-1440 {
+		padding-left: 8rem;
+		padding-right: 8rem;
+	}
+
+	@include vp-1024 {
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+
+	@include vp-768 {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+}
+.container-for-line {
+	width: 100%;
+	max-width: 192rem;
+	margin: 0 auto;
+	padding-left: 19rem;
+	padding-right: 19rem;
+
+
+	@include vp-1440 {
+		padding-right: 11rem;
+		padding-left: 11rem;
+	}
+
+	@include vp-1024 {
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+
+}
+.container-full{
+	height: 100%;
+	width: 100%;
+	// max-width: 192rem;
+	margin: 0 auto;
+	position: relative;
+}
+.container-slider{
+	height: 100%;
+	position: relative;
+	z-index: 1;
+}
+.container-top{
+	border-bottom: 1px solid var(--color-line);
+}
+.container-bottom{
+	width: 100%;
+	margin-top: 8rem;
+	border-top: 1px solid var(--color-line);
+	@include vp-1600 {
+		margin-top: 6rem;
+	}
+}
+.container-edge{
+	border-right: 1px solid var(--color-line);
+	border-left: 1px solid var(--color-line);
+	margin: 0 20px;
+}
+

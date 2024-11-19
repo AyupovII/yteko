@@ -1,0 +1,16 @@
+.button-navigation{
+    padding: 0.8rem;
+    border-radius: 6px;
+    background-color: var(--color-gray);
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+    &:hover{
+        background-color: var(--color-gray20);
+    }
+    &--left{
+        transform: rotate(180deg);
+    }
+    &--right{
+        transform: rotate(0);
+    }
+}

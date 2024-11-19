@@ -1,0 +1,41 @@
+.indicator {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    @include vp-1024 {
+        gap: 0.4rem;
+    }
+
+    &__value {
+        color: var(--color-main-red);
+        font-family: InterBold;
+        font-size: 6rem;
+        font-weight: 800;
+
+        line-height: normal;
+
+        @include vp-1024 {
+            font-size: 3.2rem;
+        }
+        &-big{
+            font-size: clamp(9rem,9vw,15rem);
+
+        }
+    }
+
+    &__text {
+        color: var(--color-black);
+        font-size: 2rem;
+
+        @include vp-1024 {
+            font-size: 1.4rem;
+        }
+    }
+    &--big{
+        padding-top: 5rem;
+        @include vp-1024 {
+            padding-top: 0;
+        }
+    }
+}

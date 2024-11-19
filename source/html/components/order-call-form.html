@@ -1,0 +1,55 @@
+<div class="modal" data-modal="order-call-form">
+	<div class="modal_wrapper">
+		<button type="button" class="modal_close-btn" data-close-modal>
+			<img src="assets/svg/close.svg" alt="close" />
+		</button>
+		<div class="modal__container">
+			<form class="form form--modal"  data-form novalidate>
+				<h3 class="form__title">Заказать звонок</h3>
+				<p class="form__text">
+					Заполните заявку и наш специалист перезвонит в ближайшее время
+				</p>
+
+				<div class="form__inputs">
+					<div class="input-field" data-input-wrap>
+						<input
+							class="input input--border"
+							type="text"
+							placeholder="Имя*"
+							name="form_text_1"
+							data-name="name"
+						/>
+					</div>
+					<div class="input-field" data-input-wrap>
+						<input
+							class="input input--border"
+							type="text"
+							placeholder="Телефон*"
+							name="form_text_2"
+							data-tel-mask
+							data-name="tel"
+						/>
+					</div>
+					<div class="input-field" data-input-wrap>
+						<input
+							class="input input--border"
+							type="email"
+                            data-name="email"
+							placeholder="Email*"
+
+						/>
+					</div>
+				</div>
+
+				<div class="form__btn">
+					@@include("source/html/ui/btn.html", {"value": "Отправить заявку", "class": "btn btn--blue", type: "button", "attr": "data-form-submit-button"})
+				</div>
+				<input name="web_form_submit" type="submit" style="display: none;" data-hidden-submit-button>
+				<p class="form__policy">
+					Отправляя форму, вы даете свое согласие на обработку своих
+					<a href="#" target="_blank"> персональных данных</a>
+				</p>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,154 @@
+.slider {
+    height: max-content;
+    position: relative;
+    height: fit-content;
+    overflow: hidden;
+    min-height: 90rem; 
+    height: 100%;
+    @media (max-height: 900px) {
+          height: 100dvh;
+          min-height: auto;
+      }
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--black-to-white);
+        opacity: 0.6;
+    }
+    @include vp-1024 {
+        // min-height: 71rem;
+        // height: 100dvh;
+    }
+    &__block-img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        &>img {
+            transform-origin: center;
+            min-height: 100%;
+            object-fit: cover;
+            animation: zoom 30000ms infinite;
+        }
+    }
+
+    &__info {
+        height: 610px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include vp-1024 {
+            height: auto;
+        }
+        @media (max-height: 900px) {
+              height: auto;
+          }
+    }
+
+    &__title {
+        color: var(--color-white);
+        // font-size: 7rem;
+        padding-bottom: 0;
+
+        @include vp-1440 {
+            font-size: 3.5rem;
+        }
+
+        @include vp-768 {
+            font-size: 2.3rem;
+        }
+    }
+
+    &__text {
+        color: var(--color-white);
+        font-size: 2rem;
+        padding-bottom: 8rem;
+        width: 482px;
+
+        @include vp-1024 {
+            font-size: 1.4rem;
+            width: auto;
+            padding-bottom: 0;
+        }
+    }
+
+    &__content {
+        height: 90rem;
+        width: 100%;
+        padding-bottom: 8rem;
+        padding-top: 20.9rem;
+        min-height: inherit;
+        
+        
+
+        position: relative;
+
+        @include vp-1024 {
+            padding-top: 9.8rem;
+            padding-bottom: 11.8rem;
+            max-height: 71rem;
+        }
+
+        height: 100%;
+        @include vp-1280 {
+            gap: 4.8rem;
+        }
+
+        @include vp-1024 {
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        h2 {
+            padding-top: 7rem;
+
+            @include vp-1024 {
+                padding-top: 0rem;
+            }
+        }
+    }
+
+    &__control {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 4rem;
+        // min-height: 31.2rem;
+        color: var(--color-white);
+        height: 100%;
+    }
+
+    &__control-end {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 8rem;
+        gap: 4rem;
+    }
+
+
+    &__preview {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}
+@keyframes zoom {
+	0% {
+		transform: scale(1.2);
+	}
+    50% {
+        transform: scale(1);
+      }
+	100% {
+		transform: scale(1.2);
+	}
+  }

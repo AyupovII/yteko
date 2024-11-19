@@ -1,0 +1,33 @@
+.about-company {
+    z-index: 5;
+    position: relative;
+    &__indicators {
+        display: flex;
+        flex-direction: column;
+        gap: 7.3rem;
+
+        @include vp-1024 {
+            gap: 1.6rem;
+        }
+    }
+
+    &__info {
+        display: flex;
+
+        &>* {
+            width: 100%;
+        }
+
+        @include vp-1024 {
+            flex-direction: column;
+            gap: 3.2rem;
+            margin-bottom: 1.6rem;
+        }
+    }
+    &__text {
+
+    }
+    &__h4{
+        max-width: 45.2rem;
+    }
+}

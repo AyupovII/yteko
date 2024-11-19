@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include("source/html/base/head.html", { "title": "Продукция" })
+
+	<body>
+		<div class="wrapper">
+			@@include("source/html/base/header.html",{ class: "border-site "})
+			<div class="border-site">
+				<div class="line light container-for-line">
+					<div class="line__element1"></div>
+					<div class="line__element2"></div>
+				</div>
+			<div class="container">
+				<div class="padding-left-right">
+					<div class="bread-crumbs bread-crumbs-container">
+						<ul class="bread-crumbs__list">
+							<li class="bread-crumbs__item">
+								<a class="bread-crumbs__link" href="#">Главная</a>
+							</li>
+							<li class="bread-crumbs__item">
+								<a class="bread-crumbs__link" href="#">Продукция</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	<main class="border-site">
+		<div class="line light container-for-line">
+			<div class="line__element1"></div>
+			<div class="line__element2"></div>
+		</div>
+				<section class="intro">
+					<div class="container">
+						<div class="padding-left-right">
+							<div class="grid-column products-container">
+								<div class="products__img br24" style="background-image: url(assets/img/img8.png);"></div>
+								<div class="products">
+									<div class="products__block">
+										<h3 class="products__block-title">Подготовка газа</h3>
+										<div class="products__block-list">
+											<div class="products__block-item"> 
+												<h4>Установки подготовки газа (УКПГ)</h4>
+												@@include("source/html/components/link-arrow.html", {"value": "Подробнее"})
+											</div>
+											<div class="products__block-item"> 
+												<h4>Мобильные установки подготовки газа (МУПГ)</h4>
+												@@include("source/html/components/link-arrow.html", {"value": "Подробнее"})
+											</div>
+										</div>
+									</div>
+									<div class="products__block">
+										<h3 class="products__block-title">Факельные установки</h3>
+										<div class="products__block-list">
+											<div class="products__block-item"> 
+												<h4>Факельные установки</h4>
+												@@include("source/html/components/link-arrow.html", {"value": "Подробнее"})
+											</div>
+										</div>
+									</div>
+									<div class="products__block">
+										<h3 class="products__block-title">Подготовка нефти</h3>
+										<div class="products__block-list">
+											<div class="products__block-item"> 
+												<h4>Установки подготовки нефти (УПН)</h4>
+												@@include("source/html/components/link-arrow.html", {"value": "Подробнее"})
+											</div>
+										</div>
+									</div>
+									@@include("source/html/ui/btn_link.html", {"value": "Показать еще", "class": "btn btn--outline products__btn"})
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include("source/html/base/footer.html")
+		</div>
+		@@include("source/html/base/scripts.html")
+	</body>
+</html>

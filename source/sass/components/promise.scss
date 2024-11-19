@@ -1,0 +1,58 @@
+.promise {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr minmax(370px, 1fr);
+  grid-template-areas:
+    "block1 block2 ."
+    ". block3 block4";
+    grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+
+
+  @include vp-1440 {
+    grid-template-columns: 2fr minmax(370px, 1fr);
+    grid-template-areas:
+      "block1 block2"
+      "block3 block4";
+  }
+
+  @include vp-768 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__block1 {
+    grid-area: block1;
+  }
+
+  &__block2 {
+    grid-area: block2;
+  }
+
+  &__block3 {
+    grid-area: block3;
+  }
+
+  &__block4 {
+    grid-area: block4;
+  }
+
+  &__title {
+    margin-bottom: 8rem;
+
+    @include vp-1024 {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &>div {
+    padding: 3.2rem;
+    border-radius: 24px;
+    background-color: var(--color-gray);
+    gap: 8rem;
+
+    @include vp-1024 {
+      padding: 2.4rem;
+    }
+  }
+}

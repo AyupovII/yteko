@@ -1,0 +1,85 @@
+.bread-crumbs {
+  font-size: 1.6rem;
+
+  @include vp-1024 {
+    font-size: 1.4rem;
+  }
+  &-container {
+    margin: 8rem 0 5rem 0;
+
+    @include vp-1024 {
+      margin: 4rem 0 3.2rem 0;
+    }
+  }
+
+  &--absolute {
+    position: absolute;
+    z-index: 2;
+    padding-top: 20.2rem;
+    @media (max-height: 900px) {
+      padding-top: 10.2rem;
+  }
+    @include vp-1024 {
+      padding-top: 8.8rem;
+    }
+    .bread-crumbs__item {
+      color: var(--color-white);
+    }
+
+    .bread-crumbs__link {
+      color: var(--color-white);
+    }
+  }
+
+  &__list {
+    // display: flex;
+    // flex-wrap: wrap;
+    gap: 0.4rem;
+    & *:not(:last-child) {
+      float: left;
+    }
+    @include vp-768 {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__item {
+    color: var(--color-black40);
+
+    &:not(:last-child) {
+      &:after {
+        content: '/';
+        margin: 0 0.8rem;
+      }
+    }
+
+    &:last-child {
+      pointer-events: none;
+      white-space: nowrap; /* Текст не переносится */
+      overflow: hidden; /* Обрезаем всё за пределами блока */
+      text-overflow: ellipsis; /* Добавляем многоточие */
+    }
+
+  }
+
+  &__link {
+    color: var(--color-black40);
+    &:hover {
+      color: var(--color-main-blue);
+    }
+  }
+
+  &--white {
+    .bread-crumbs__item {
+      color: var(--color-white);
+    }
+
+    .bread-crumbs__link {
+      transition: all var(--default-transition);
+      color: var(--color-white);
+      &:hover {
+        color: var(--color-main-blue);
+      }
+    }
+  }
+}

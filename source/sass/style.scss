@@ -1,0 +1,82 @@
+// Vendor
+// ---------------------------------
+@import 'vendor/normalize';
+@import '../../node_modules/swiper/swiper.scss';
+
+// Global
+// ---------------------------------
+@import 'variables';
+@import 'breakpoints';
+@import 'mixins';
+@import 'global/fonts';
+@import 'global/reboot';
+@import 'global/utils';
+@import 'global/container';
+
+// Components
+// ---------------------------------
+@import 'components/swiper-custom';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/modal';
+@import 'components/accordion';
+@import 'components/nav-links';
+@import 'components/mobile-menu';
+@import 'components/slider';
+@import 'components/banner';
+@import 'components/preview-link';
+@import 'components/indicator';
+@import 'components/about-company';
+@import 'components/grid-box';
+@import 'components/video-block';
+@import 'components/info-block';
+@import 'components/wide-block';
+@import 'components/abstraction';
+@import 'components/abstraction-career';
+@import 'components/companies';
+@import 'components/nav';
+@import 'components/bread-crumbs';
+@import 'components/article';
+@import 'components/certificates';
+@import 'components/form';
+@import 'components/products';
+@import 'components/detailed-products';
+@import 'components/documents';
+@import 'components/interest';
+@import 'components/contacts';
+@import 'components/contacts-main';
+@import 'components/solutions';
+@import 'components/promise';
+@import 'components/video-fon';
+@import 'components/video-fon-form';
+@import 'components/benefits';
+@import 'components/person';
+@import 'components/vacancies';
+@import 'components/region';
+@import 'components/about-project';
+@import 'components/completed-work';
+@import 'components/not-found-page';
+@import 'components/slider-career';
+@import 'components/slider-project';
+@import 'components/button-navigation';
+@import 'components/absolute-grid';
+@import 'components/privacy-policy';
+@import 'components/notification';
+@import 'components/cookies';
+
+
+
+
+// Ui
+// ---------------------------------
+
+@import 'ui/btn';
+@import 'ui/input';
+@import 'ui/link-arrow';
+@import 'ui/table';
+@import 'ui/input-file';
+@import 'ui/description';
+
+// ---------------------------------
+
+// адаптив пишем внутри каждого класса (смотрим container.scss)

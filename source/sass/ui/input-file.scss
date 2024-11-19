@@ -1,0 +1,85 @@
+    .import-file {
+        position: relative;
+
+        & span {
+            font-size: 1.6rem;
+
+            @include vp-1024 {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .import-file input[type=file] {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        outline: 0;
+        // opacity: 0;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .import-file label {
+        width: 100%;
+        height: 61px;
+        outline: 1px dashed var(--color-placeholder);
+        border-radius: 16px;
+        display: block;
+        transition: border 300ms ease;
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+        text-align: left;
+        padding: 21px;
+
+        &:hover {
+            outline: 1px dashed var(--color-main-blue) !important;
+        }
+    }
+
+    .import-file span {
+        color: var(--color-placeholder);
+        font-family: 'CircularStdBook', sans-serif !important;
+        font-size: 1.6rem;
+        // line-height: 20px;
+        position: relative;
+
+        @include vp-1024 {
+            font-size: 1.4rem;
+        }
+    }
+
+    .import-file label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-field.error {
+        .import-file label {
+            outline: 1px dashed var(--color-main-red);
+        }
+    }
+
+    #fileLabel {
+        color: var(--color-placeholder);
+
+        &>*::after {
+            content: "";
+            position: absolute;
+            margin-left: 8px;
+            margin-top: 0px;
+            background-image: url(../assets/svg/paperclip.svg);
+            background-size: cover;
+            height: 19px;
+            width: 19px;
+
+            @include vp-1024 {
+                height: 17px;
+                width: 17px;
+            }
+        }
+    }

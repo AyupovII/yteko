@@ -1,0 +1,99 @@
+.input {
+    width: 100%;
+    border-radius: 16px;
+    padding: 1.6rem 2.4rem 1.5rem 2.4rem;
+    border: 1px solid var(--color-main-white);
+    font-size: 1.6rem;
+
+    @include vp-1024 {
+        font-size: 1.4rem;
+        border-radius: 12px;
+    }
+
+    &:focus,
+    &:hover {
+        outline: 1px solid var(--color-main-blue) !important;
+    }
+
+    &:focus,
+    &:focus-visible,
+    &:not(:placeholder-shown) {
+        // border-color: var(--color-main-blue);
+        outline-color: var(--color-main-blue);
+
+        &::placeholder {
+            font-weight: 400;
+        }
+
+        @include vp-1024 {}
+    }
+
+    &::placeholder {
+        color: var(--color-placeholder);
+    }
+
+    @include vp-1024 {
+        padding: 1.4rem;
+    }
+
+    &--border {
+        border: 1px solid var(--color-black50);
+    }
+
+}
+
+input[type=file] {
+    position: relative;
+    cursor: pointer;
+    color: var(--color-placeholder);
+    text-align-last: center;
+    align-content: center;
+
+    &::after {
+        content: "";
+        position: absolute;
+        margin-left: 8px;
+        margin-top: 1px;
+        background-image: url(../assets/svg/paperclip.svg);
+        background-size: cover;
+        height: 19px;
+        width: 19px;
+
+        @include vp-1024 {
+            height: 17px;
+            width: 17px;
+        }
+    }
+}
+
+input[type=file]::file-selector-button {
+    display: none;
+}
+
+input[type=text] {
+    font-size: 1.6rem;
+
+    @include vp-1024 {
+        font-size: 1.4rem;
+    }
+}
+input[type='file'] {
+    opacity:0    
+  }
+
+.input_error {
+    display: none;
+}
+
+.input-field.error {
+    .input {
+        outline: 1px solid var(--color-main-red);
+    }
+
+    .input_error {
+        display: flex;
+        justify-content: center;
+        padding-top: 1.2rem;
+        color: var(--color-main-red);
+    }
+}

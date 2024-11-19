@@ -1,0 +1,102 @@
+.vacancies {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr minmax(370px, 1fr);
+  gap: 1.7rem;
+
+
+  @include vp-1440 {
+    grid-template-columns: 2fr minmax(370px, 1fr);
+  }
+
+  @include vp-1024 {
+    gap: 1.2rem;
+  }
+
+  @include vp-768 {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  &__text {
+    gap: 1.2rem;
+    padding-bottom: 2.4rem;
+
+    @include vp-1024 {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding-bottom: 1.2rem;
+    }
+
+    &>* {
+      display: inline;
+
+      @include vp-1024 {
+        display: block;
+      }
+    }
+
+    &>p {
+      color: var(--color-black);
+    }
+  }
+
+  &>div {
+    padding: 3.2rem;
+    border-radius: 24px;
+    background-color: var(--color-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include vp-1024 {
+      padding: 2.4rem;
+    }
+  }
+
+  &__empty {
+    padding: 0 !important;
+    background-color: var(--color-white) !important;
+    justify-content: flex-end !important;
+    align-items: flex-start !important;
+
+    @include vp-1440 {
+      align-items: flex-end !important;
+      order: 1;
+    }
+    @include vp-1024 {
+      display: none !important;
+    }
+  }
+
+  &__title {
+    padding-bottom: 5rem;
+
+    @include vp-1024 {
+      padding-bottom: 3.2rem;
+    }
+  }
+
+  &__price {
+    padding-bottom: 2.4rem;
+  }
+
+  &__type-time {
+    padding-bottom: 5rem;
+
+    @include vp-1024 {
+      padding-bottom: 3.2rem;
+    }
+  }
+
+  &__btn {
+    margin-top: -7.2rem;
+    position: relative;
+    @include vp-1440 {
+      margin-top: 4rem;
+      margin-left: auto;
+    }
+  }
+}

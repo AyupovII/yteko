@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include("source/html/base/head.html", { "title": "Разводящая страница" })
+
+<body>
+
+    <div class="wrapper">
+        <main>
+            <section class="intro">
+                <div class="container">
+                    <h2>Разводящая страница</h2>
+                    <ul>
+                        <li style="margin-top: 10px;">
+                            <a href="index.html" style="color: blue;">Главная — index.html</a>
+                        </li>
+                        <li style="margin-top: 10px;">
+                            <a href="about-company.html" style="color: blue;">О компании — about-company.html</a>
+                        </li>
+                        <li style="margin-top: 10px;">
+                            <a href="products.html" style="color: blue;">Оборудование общая — products.html</a>
+                            <ul>
+                                <li style="margin-top: 10px; margin-left: 30px;">
+                                    <a href="detailed-products.html" style="color: blue;">Оборудование - детальная страница  – detailed-products.html</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li style="margin-top: 10px;">
+                            <a href="general-services.html" style="color: blue;">Услуги — general-services.html</a>
+                        </li>
+                        <li style="margin-top: 10px;">
+                            <a href="career.html" style="color: blue;">Карьера — career.html</a>
+                        </li>
+                        <li style="margin-top: 10px;">
+                            <a href="projects.html" style="color: blue;">Проекты — projects.html</a>
+                            <ul>
+                                <li style="margin-top: 10px;; margin-left: 30px;">
+                                    <a href="detailed-project.html" style="color: blue;">Проекты – детальная страница —
+                                        detailed-project.html</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li style="margin-top: 10px;">
+                            <a href="contacts.html" style="color: blue;">Контакты — contacts.html</a>
+                        </li>
+                        <li style="margin-top: 10px;">
+                            <a href="contacts-main.html" style="color: blue;">Головной офис — contacts-main.html</a>
+                        </li>
+                        <li style="margin-top: 10px;">
+                            <a href="privacy-policy.html" style="color: blue;">Политика конфиденциальности —
+                                privacy-policy.html</a>
+                        </li>
+                        <li style="margin-top: 10px;">
+                            <a href="404.html" style="color: blue;">404 — 404.html</a>
+                        </li>
+                    </ul>
+                    <div style="margin-top: 10px;">
+                        @@include("source/html/ui/btn.html", {"value": "Отправить заявку", "class": "btn btn--blue", attr: "data-modal-button='notification'"})
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+    @@include("source/html/components/order-call-form.html")
+    @@include("source/html/components/notification.html")
+
+    @@include("source/html/base/scripts.html")
+</body>
+
+</html>
