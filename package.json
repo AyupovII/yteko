@@ -1,6 +1,7 @@
 {
   "private": true,
   "type": "module",
+  "homepage": "https://ayupovii.github.io/yteko",
   "browserslist": [
     "last 3 versions",
     "IE 11",
@@ -9,6 +10,7 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "deploy": "gh-pages -d build",
     "test": "npm run editorconfig & npm run stylelint & eslint source/js/",
     "build": "cross-env NODE_ENV=production gulp build & gulp imagemin",
     "start": "cross-env NODE_ENV=development gulp start",
@@ -58,6 +60,7 @@
     "node": ">=16.15.1"
   },
   "dependencies": {
+    "gh-pages": "^6.2.0",
     "swiper": "^11.1.4"
   }
 }
